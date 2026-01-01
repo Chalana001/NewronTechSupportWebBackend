@@ -23,6 +23,11 @@ public class ItemController {
         return itemService.getAllItems();
     }
 
+    @GetMapping("/{itemCode}")
+    public Item getItemByCode(@PathVariable int itemCode) {
+        return itemService.getItemByCode(itemCode);
+    }
+
     @PostMapping("/additem")
     public Item addItem (@RequestBody Item item){
         itemService.addItem(item);

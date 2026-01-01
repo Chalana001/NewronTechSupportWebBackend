@@ -39,6 +39,23 @@ public class ItemServiceImpl implements ItemService {
     }
 
     @Override
+    public Item getItemByCode(int itemCode) {
+        ItemEntity itemEntity = itemRepository
+                .findByItemCode(itemCode)
+                .orElseThrow(() -> new RuntimeException("Item not found"));
+
+        return new Item(
+                itemEntity.getItemCode(),
+                itemEntity.getName(),
+                itemEntity.getDescription(),
+                itemEntity.getCategory(),
+                itemEntity.getBrand(),
+                itemEntity.getPrice(),
+                itemEntity.getImgUrl()
+        );
+    }
+
+    @Override
     public void addItem(Item item) {
         ItemEntity itemEntity = new ItemEntity();
 

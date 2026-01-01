@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface ItemService {
     List<Item> getAllItems();
-
+    Item getItemByCode(int itemCode);
     void addItem(Item item);
 }
