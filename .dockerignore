@@ -1,0 +1,25 @@
+# Maven / build output
+target/
+.mvn/
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Git
+.git
+.gitignore
+
+# Logs
+*.log
+
+# Env files (important for security)
+.env
+
+# Node (if exists accidentally)
+node_modules/

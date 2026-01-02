@@ -21,7 +21,7 @@ public class CategoryServiceImpl implements CategoryService{
     @Override
     public Category addCategory(Category category) {
         CategoryEntity categoryEntity = new CategoryEntity();
-        categoryEntity.setCName(category.getName());
+        categoryEntity.setName(category.getName());
         categoryRepository.save(categoryEntity);
         return category;
     }
@@ -31,7 +31,7 @@ public class CategoryServiceImpl implements CategoryService{
         categoryList.clear();
         categoryEntityListList = categoryRepository.findAll();
         for (CategoryEntity categoryEntity: categoryEntityListList){
-            categoryList.add(categoryEntity.getCName());
+            categoryList.add(categoryEntity.getName());
         }
         return categoryList;
     }
