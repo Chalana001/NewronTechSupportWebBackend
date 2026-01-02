@@ -68,5 +68,4 @@ public class ItemServiceImpl implements ItemService {
         itemEntity.setImgUrl(item.getImgUrl());
         itemRepository.save(itemEntity);
     }
-
 }
