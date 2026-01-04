@@ -4,7 +4,7 @@ import com.chala.newron.model.dto.Category;
 import com.chala.newron.model.dto.Item;
 import com.chala.newron.service.CategoryService;
 import com.chala.newron.service.ItemService;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -46,4 +46,10 @@ public class ItemController {
     public Category addCategory (@RequestBody Category category){
         return categoryService.addCategory(category);
     }
+
+//    @GetMapping("/helth")
+//    public ResponseEntity<String> health() {
+//        return ResponseEntity.ok("OK");
+//    }
+
 }
